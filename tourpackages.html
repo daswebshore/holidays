@@ -1,0 +1,65 @@
+---
+layout: subpage
+title: Tour Packages
+---
+
+<div class="row">
+{% for packages_item in site.packages %}
+<div class="column large-6">
+  <div class="pkg-item">
+    <a href="{{ packages_item.url }}">
+    <div class="df">
+      <div class="col pkg-thumb">
+        <img src="{{ packages_item.packageimg }}" alt="{{ packages_item.packagename }}" title="{{ packages_item.packagename }}">
+      </div>
+      <div class="col df f-a-m">
+        <div class="dis-group">
+          <div class="pkg-name"> {{ packages_item.packagename }} </div>
+          <div class="package-destination"> {{ packages_item.packagedestination }} </div>
+          <div class="package-time"> {{ packages_item.packagenight }} </div>
+          <div class="package-include">
+            <i class="c1 fa fa-glass" aria-hidden="true"></i>
+            <i class="c2 fa fa-car" aria-hidden="true"></i>
+            <i class="c3 fa fa-cutlery" aria-hidden="true"></i>
+            <i class="c4 fa fa-book" aria-hidden="true"></i>
+          </div>
+          <div class="package-price"> {{ packages_item.packageprice }} </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
+{% endfor %}
+
+<!--
+
+{% for packages_item in site.packages %}
+<div class="column large-6">
+  <div class="pkg-item">
+    <a href="/package-details.html">
+    <div class="df">
+      <div class="col pkg-thumb">
+        <img src="{{ packages_item.packageimg }}" alt="{{ packages_item.packagename }}" title="{{ packages_item.packagename }}">
+      </div>
+      <div class="col df f-a-m">
+        <div class="dis-group">
+          <div class="pkg-name"> {{ packages_item.packagename }} </div>
+          <div class="package-destination"> {{ packages_item.packagedestination }} </div>
+          <div class="package-time"> {{ packages_item.packagenight }} </div>
+          <div class="package-include">
+            <i class="c1 fa fa-glass" aria-hidden="true"></i>
+            <i class="c2 fa fa-car" aria-hidden="true"></i>
+            <i class="c3 fa fa-cutlery" aria-hidden="true"></i>
+            <i class="c4 fa fa-book" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
+{% endfor %} -->
+
+
+</div>

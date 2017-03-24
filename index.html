@@ -1,0 +1,284 @@
+---
+layout: header-home
+title: Rv Holidays
+---
+
+
+<!-- about us container -->
+    <div class="about-us-container full df f-a-m por z1">
+      <div class="row">
+
+        <div class="ab-group">
+          <div class="row">
+            <div class="large-6 column">
+              <h2 class="narrow"> About <span class="hylight"> RV Holidays </span>  </h2>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, porro aut cum numquam nobis suscipit, a, excepturi necessitatibus harum atque animi omnis. Deserunt sint ducimus officia illum placeat beatae, architecto voluptatum nulla velit reprehenderit officiis repellat at ea commodi, totam libero ipsam! Cumque aperiam reprehenderit enim in beatae, repellendus, magnam maiores cum vel expedita quisquam libero,</p>
+              <div class="button simple "> Read Complete Profile <i class="fa fa-angle-double-right" aria-hidden="true"></i> </div>
+            </div>
+            <div class="large-6 column ab-top-destination">
+              <h2 class="narrow"> Top Destination  </h2>
+              <ul>
+                <li> <a href="#"> Cochin  </a></li>
+                <li> <a href="#"> Munnar </a></li>
+                <li> <a href="#"> Thekkady </a></li>
+                <li> <a href="#"> Hillstations  </a></li>
+                <li> <a href="#"> Wild Life </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- End about us container -->
+
+<!-- What We have to give -->
+    <div class="what-we-container gap-large df f-a-m full">
+      <div class="row">
+        <div class="group-service">
+        <h2 class="narrow tac mb30"> What we have to give </h2>
+        <div class="has-cover-slider">
+          <div class="row">
+            <div class="column large-4">
+              <div class="slider-card overlay-cover" style="background-image:url(images/services.jpg);">
+                <div class="overlay"></div>
+                <h2> Service Name </h2>
+                <div class="hide-cap">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aut eius ullam quam obcaecati reiciendis ad autem neque, iure, animi ducimus nisi magni voluptates vel deserunt maiores delectus nemo aperiam.</p>
+                  <div class="button button-primery"> Read More </div>
+                </div>
+              </div>
+            </div>
+            <div class="column large-4">
+              <div class="slider-card overlay-cover" style="background-image:url(images/services1.jpg);">
+                <div class="overlay"></div>
+                <h2> Service Name </h2>
+                <div class="hide-cap">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aut eius ullam quam obcaecati reiciendis ad autem neque, iure, animi ducimus nisi magni voluptates vel deserunt maiores delectus nemo aperiam.</p>
+                  <div class="button button-primery"> Read More </div>
+                </div>
+              </div>
+            </div>
+            <div class="column large-4">
+              <div class="slider-card overlay-cover" style="background-image:url(images/services2.jpg);">
+                <div class="overlay"></div>
+                <h2> Service Name </h2>
+                <div class="hide-cap">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aut eius ullam quam obcaecati reiciendis ad autem neque, iure, animi ducimus nisi magni voluptates vel deserunt maiores delectus nemo aperiam.</p>
+                  <div class="button button-primery"> Read More </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+<!-- End What We have to give -->
+
+
+
+<!-- Package container -->
+  <div class="pkg-fuild full">
+      <div class="row package-container df f-a-m">
+        <div class="group-package d-f-full">
+          <h2 class="narrow tac mb30"> Tour Packages that we offer </h2>
+          <div class="has-cover-slider">
+            <div class="row">
+
+              {% for packages_item in site.packages limit:4 %}
+              <div class="column large-6">
+                <div class="pkg-item">
+                  <a href="{{ packages_item.url }}">
+                  <div class="df">
+                    <div class="col pkg-thumb">
+                      <img src="{{ packages_item.packageimg }}" alt="{{ packages_item.packagename }}" title="{{ packages_item.packagename }}">
+                    </div>
+                    <div class="col df f-a-m">
+                      <div class="dis-group">
+                        <div class="pkg-name"> {{ packages_item.packagename }} </div>
+                        <div class="package-destination"> {{ packages_item.packagedestination }} </div>
+                        <div class="package-time"> {{ packages_item.packagenight }} </div>
+                        <div class="package-include">
+                          <i class="c1 fa fa-glass" aria-hidden="true"></i>
+                          <i class="c2 fa fa-car" aria-hidden="true"></i>
+                          <i class="c3 fa fa-cutlery" aria-hidden="true"></i>
+                          <i class="c4 fa fa-book" aria-hidden="true"></i>
+                        </div>
+                        <div class="package-price"> {{ packages_item.packageprice }} </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+              {% endfor %}
+
+              <div class="column tac">
+                <a href="/tourpackages.html">
+                  <div class="button button-primery"> More Packages </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<!-- Emnd Package container -->
+
+
+<!-- gallery -->
+
+  <div class="destination-fuild full">
+    <div class="row df f-a-m vh">
+      <div class="g column">
+      <h2 class="narrow tac mb30"> Top Destination  </h2>
+      {% for destination_item in site.destinations limit:1 %}
+      <div class="large-4 column">
+        <a href="{{ destination_item.url }}">
+          <div class="destination-item overlay-cover">
+            <div class="overlay"></div>
+            <img src="{{ destination_item.destination-img }}" alt="">
+            <div class="cap">
+              <span> {{ destination_item.destinationname }} </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+      <div class="large-4 column">
+        <div class="row">
+          {% for destination_item in site.destinations limit:1 offset:2 %}
+          <div class="large-6 column">
+            <a href="{{ destination_item.url }}">
+              <div class="destination-item overlay-cover">
+                <div class="overlay"></div>
+                <img src="{{ destination_item.destination-img }}" alt="">
+                <div class="cap small">
+                  <span> {{ destination_item.destinationname }} </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+          {% for destination_item in site.destinations limit:1 offset:3 %}
+          <div class="large-6 column">
+            <a href="{{ destination_item.url }}">
+              <div class="destination-item overlay-cover">
+                <div class="overlay"></div>
+                <img src="{{ destination_item.destination-img }}" alt="">
+                <div class="cap small">
+                  <span> {{ destination_item.destinationname }} </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for destination_item in site.destinations limit:1 offset:4 %}
+          <div class="large-6 column">
+            <a href="{{ destination_item.url }}">
+              <div class="destination-item overlay-cover">
+                <div class="overlay"></div>
+                <img src="{{ destination_item.destination-img }}" alt="">
+                <div class="cap small">
+                  <span> {{ destination_item.destinationname }} </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+          {% for destination_item in site.destinations limit:1 offset:4 %}
+          <div class="large-6 column">
+            <a href="{{ destination_item.url }}">
+              <div class="destination-item overlay-cover">
+                <div class="overlay"></div>
+                <img src="{{ destination_item.destination-img }}" alt="">
+                <div class="cap small">
+                  <span> {{ destination_item.destinationname }} </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% for destination_item in site.destinations limit:1 offset:5 %}
+      <div class="large-4 column">
+        <a href="{{ destination_item.url }}">
+          <div class="destination-item overlay-cover">
+            <div class="overlay"></div>
+            <img src="{{ destination_item.destination-img }}" alt="">
+            <div class="cap">
+              <span> {{ destination_item.destinationname }} </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+      <div class="column tac">
+        <div class="button button-primery"> More Destination </div>
+      </div>
+     </div>
+    </div>
+  </div>
+
+<!--End gallery -->
+
+
+<div class="contact-fuild full">
+  <div id="map" class="googlemap"></div>  <!-- googlemap -->
+  <div class="row df f-a-m vh">
+    <div class="group-contact">
+      <div class="column">
+        <h2 class="narrow tac mb30"> Location </h2>
+      </div>
+      <div class="large-6 column"></div>
+      <div class="large-6 column">
+        <div class="gap-small">
+          <div class="dark-box">
+            <h3> Give Us Your Feedback </h3>
+            <form class="simple ">
+              <div class="row">
+                <div class="columns">
+                  <label>
+                    <input type="text" placeholder="Name">
+                  </label>
+                </div>
+                <div class="columns">
+                  <label>
+                    <input type="email" placeholder="Email">
+                  </label>
+                </div>
+                <div class="columns">
+                  <label>
+                    <textarea placeholder="Message"></textarea>
+                  </label>
+                </div>
+                <div class="column">
+                  <button type="button" class="button button-primery">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="gap-small">
+          <div class="dark-box">
+            <h3> Reach Us  </h3>
+            <p>
+              XX/586, Cheepumkal P.O  Kumarakom, <br>
+              Kottayam Dist, Kerala State. Pin: 686 563. INDIA <br>
+            </p>
+            <p>
+             Mobile : <b> +91 94 97 38 47 80 </b> |  Office Tel: <b> +91 481 25  25 225 </b> <br>
+             Email:  <b> rvholidays1@gmail.com </b>  | <b> www.rvholidays.in </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

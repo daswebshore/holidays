@@ -1,0 +1,19 @@
+---
+layout: subpage
+title: Destinations
+---
+ 
+
+{% for destination_item in site.destinations %}
+<div class="large-3 column end">
+  <a href="{{ destination_item.url }}">
+    <div class="destination-item overlay-cover">
+      <div class="overlay"></div>
+      <img src="{{ destination_item.destination-img }}" alt="">
+      <div class="cap">
+        <span> {{ destination_item.destinationname }} </span>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}

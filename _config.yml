@@ -1,0 +1,23 @@
+collections:
+  packages:
+    output: true
+
+  destinations:
+    output: true
+
+
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+
+
+exclude:          [scss, gulpfile.js]
+
+
+port: 8080
+
+
+# Minifiter
+gems:
+    - jekyll-minifier
+
